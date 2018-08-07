@@ -6,10 +6,6 @@ char data[1024];
 int i, lines = 0, writelines = 0, iffileexists, result, filesize;
 class functionLibrary {
 	public:
-		void _init_() {
-			system("cmd /c cls");
-			cout << "\e[1mopenDATA Build 100\e[0m\nWritten by jaxxmelbourne27\n\nType 'help' for more commands\n\n";
-		}
 		void commandline() {
 			cout << "> ";
 			cin >> command;
