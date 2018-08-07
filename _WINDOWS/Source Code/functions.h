@@ -6,10 +6,10 @@ char data[1024];
 int i, lines = 0, writelines = 0, iffileexists, result, filesize;
 class functionLibrary {
 	public:
-		void commandline() {
+		void commandline(x) {
 			cout << "> ";
 			cin >> command;
-			commandLibrary();
+			commandLibrary(x);
 		}
 		void inputfilename() {
 			cout << "\e[1mPath to file + filename\e[0m: ";
@@ -126,10 +126,10 @@ class functionLibrary {
 				++lines;
 			}
 		}
-		void commandLibrary() {
+		void commandLibrary(x) {
 			if(command == "exit") {
 				cout << "\e[1mThank you for using openDATA Build 100\n\e[0m" << endl;
-				exit(0);
+				x = false;
 			} else if(command == "read") {
 				inputfilename();
 				readfile();
